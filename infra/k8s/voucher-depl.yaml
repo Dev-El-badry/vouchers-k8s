@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: voucher-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: voucher
+  template:
+    metadata:
+      labels:
+        app: voucher
+    spec:
+      containers:
+        - name: voucher
+          image: eslam1146/voucher
+          env:
+            - name: NATS_CLIENT_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NATS_URL
+              value: "http://nats-srv:4222"
+            - name: NATS_CLUSTER_ID
+              value: vouchers
+            - name: MONGO_URI
+              value: "mongodb://voucher-mongo-srv:27017/vouchers"
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_KEY
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: voucher-serv
+spec:
+  selector:
+    app: voucher
+  ports:
+    - name: voucher
+      protocol: TCP
+      port: 3000
+      targetPort: 3000

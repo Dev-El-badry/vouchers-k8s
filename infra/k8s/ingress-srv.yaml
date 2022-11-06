@@ -17,31 +17,17 @@ spec:
                 name: auth-serv
                 port:
                   number: 3000
-          # - path: /api/tickets/?(.*)
-          #   pathType: Prefix
-          #   backend:
-          #     service:
-          #       name: ticket-srv
-          #       port:
-          #         number: 3000
-          # - path: /api/orders/?(.*)
-          #   pathType: Prefix
-          #   backend:
-          #     service:
-          #       name: order-srv
-          #       port:
-          #         number: 3000
-          # - path: /api/payments/?(.*)
-          #   pathType: Prefix
-          #   backend:
-          #     service:
-          #       name: payment-srv
-          #       port:
-          #         number: 3000
-          # - path: /?(.*)
-          #   pathType: Prefix
-          #   backend:
-          #     service:
-          #       name: client-srv
-          #       port:
-          #         number: 3000
+          - path: /api/vouchers/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: voucher-serv
+                port:
+                  number: 3000
+          - path: /api/voucher_pool/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: voucher-serv
+                port:
+                  number: 3000
