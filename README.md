@@ -22,6 +22,7 @@ add (vouchers.dev) domain to hosts files into your machine
 <img align="right" src="https://i.imgur.com/Rw1qxI7.png" alt="Hosts file" />
 
 
+### Last Step
 Next, navigate in your terminal to the directory you cloned this, and spin up the containers for the web server by running
 
 ```sh
