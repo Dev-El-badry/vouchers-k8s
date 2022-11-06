@@ -9,7 +9,7 @@ To get started, make sure you have Docker installed and enabled <b>kubernates</b
 
 <i><small>Skaffold handles the workflow for building, pushing and deploying your application, allowing you to focus on what matters most: writing code. </small></i>
 
-setup skaffold [Installing skaffold] (https://skaffold.dev/docs/install/)
+setup skaffold [Installing skaffold](https://skaffold.dev/docs/install/)
 
 ### Third Step
 install ingress-nginx by running 
