@@ -1,6 +1,6 @@
 # Design API For Voucher Pool Microservices (k8s)
 
-## Usage
+## Getting Started
 
 ### First Step
 To get started, make sure you have Docker installed and enabled <b>kubernates</b> on your system, and then clone this repository.
