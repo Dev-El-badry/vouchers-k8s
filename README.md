@@ -69,7 +69,7 @@ Next, navigate in your terminal to the directory you cloned this, run command be
 \*\* Note our running test outside the container to prevent container to upload large libraries like: `mongodb-memory-server` every time change `package.json`
 [mongodb-memory-server](https://www.npmjs.com/package/mongodb-memory-server)
 
-## Microservices
+## System Design Of App
  - [x] architect ,scalable app using collections of services handle by kubernets.
  - [x] using load balancing is called nginx-ingress.
  - [x] communication between services using a lighting-fast event bus by using nats-streaming.
