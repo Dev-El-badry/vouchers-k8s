@@ -107,7 +107,7 @@ Next, navigate in your terminal to the directory you cloned this, run command be
 - [x] listen voucher:updated evnet
 
 ## Common  
-<p><small>share reusable code between multiple express services using custom. NPM Package to prevent repeating code</small></p>
+##### <small>share reusable code between multiple express services using custom. NPM Package to prevent repeating code</small>
 - [x] middlewares
 - [x] events
 - [x] errors
