@@ -31,3 +31,10 @@ spec:
                 name: voucher-serv
                 port:
                   number: 3000
+          - path: /api/redeem/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: redeem-serv
+                port:
+                  number: 3000

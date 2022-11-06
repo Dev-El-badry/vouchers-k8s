@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redeem-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redeem
+  template:
+    metadata:
+      labels:
+        app: redeem
+    spec:
+      containers:
+        - name: redeem
+          image: eslam1146/redeem
+          env:
+            - name: NATS_CLIENT_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NATS_URL
+              value: "http://nats-srv:4222"
+            - name: NATS_CLUSTER_ID
+              value: vouchers
+            - name: MONGO_URI
+              value: "mongodb://redeem-mongo-srv:27017/redeem"
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_KEY
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redeem-serv
+spec:
+  selector:
+    app: redeem
+  ports:
+    - name: redeem
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
