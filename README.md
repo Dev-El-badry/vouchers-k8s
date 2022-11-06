@@ -17,6 +17,11 @@ install ingress-nginx by running
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.4.0/deploy/static/provider/cloud/deploy.yaml
 ```
 
+#### Creating a secret / accessing secret
+```sh
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=my-secret-key
+```
+
 ### Fourth Step
 add [vouchers.dev](vouchers.dev) domain to hosts files into your machine
 
