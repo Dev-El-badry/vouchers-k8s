@@ -18,8 +18,15 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 ```
 
 ### Fourth Step
-add (vouchers.dev) domain to hosts files into your machine
+add [vouchers.dev](vouchers.dev) domain to hosts files into your machine
+
+- windows => ``` C:\Windows\System32\drivers\etc ```
+- mac / linux => ``` nano /etc/hosts ```
+<br />
+<div>
 <img align="right" src="https://i.imgur.com/Rw1qxI7.png" alt="Hosts file" />
+</div>
+
 
 
 ### Last Step
