@@ -24,7 +24,7 @@ add [vouchers.dev](vouchers.dev) domain to hosts files into your machine
 - mac / linux => ``` nano /etc/hosts ```
 <br />
 <div>
-<img align="right" src="https://i.imgur.com/Rw1qxI7.png" alt="Hosts file" />
+<img align="center" src="https://i.imgur.com/Rw1qxI7.png" alt="Hosts file" />
 </div>
 
 
